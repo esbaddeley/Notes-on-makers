@@ -1,0 +1,35 @@
+Encapsulation
+
+Keeping complexity to a minimum - we don't have to know how everything works, we have user interfaces which allows us to interact with complex objects only in the ways we need to - c.f an engine in a car.
+
+In coding, units of responsibility are Classes (behaviour and state) and Methods (state). Methods create interfaces to project the complexity of our classes.
+
+Creating unit of responsibility
+Creating an interface through methods
+Protecting complexity from interference from outside
+
+
+Class DockingStation
+
+attr_reader :bikes
+
+end
+
+ds = DockingStation.new
+ds.bikes - I can do anything I want now to this array, I just can't set the variable to be something else. But i can do anything to this object - i.e delete everything inside it.
+
+This breaks encapsulation as I can compromise the integrity of the class.
+
+How to avoid? - make private (may not work if you have to access them)
+
+In the van example - we need to ensure that any changes to the state of a class, are performed by the class - i.e only the Docking Station should have access to amends its own instance variables - so on
+
+.dup - duplicating methods on an array
+
+
+Reference types vs Value types
+
+Reference - the identity of the object defines it (an instance of a class)
+Value - the value of an object defines it (i.e Numbers, Strings)
+
+The equality operator will compare different things depending on the type of object - Ruby does this automatically. Ruby will compare objects you define by Reference by default - you can change this by amending the method in your class to define how the equality operator will work.

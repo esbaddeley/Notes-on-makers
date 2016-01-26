@@ -1,0 +1,20 @@
+Rspec
+
+Double
+Def - Model of an object that stands in for an object - rather than an instantiation of the object itself.
+
+1. - Used to isolate tests by ensure you're not rely in code from another class to pass the test.
+
+2. Simplifies the set up for a test, particularly where the object relied on is a complex one
+
+
+Stubs - we care about the return values, we used to plug the holes in the method
+Mocks - we simulate behaviour and check that the object receives the right messages.
+
+The error messages will tell us what methods we need to stub on which objects.
+
+Really complex tests indicate that there could be an issue with the design.
+
+In unit tests the only way to be absolutely sure that you're components are working, and it allows for emergent design - so a better design to reveal itself through the development of the testing.
+
+You can stub methods on real objects as well as doubles - but you want to be careful as you might change the behaviour you're trying to test, and make the test invalid.

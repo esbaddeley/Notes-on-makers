@@ -1,0 +1,28 @@
+Airport Challenge - best practice for implementation
+
+Inconsistency between how the tests are described, and what is actually being tested - the wording needs to be consistent with expectation.
+
+'It' is used in the right way to refer to the object (or method) being tested. Making sure it is clear what the expectation is, and what the expectation is on.
+
+Testing a precise array implementation - Ruby treats arrays as value classes. We also want to hide the implementation, but by testing for an array we've introduced a dependancy on having an array object, rather than testing that the method has implemented well.
+
+File name: snake_case
+Class names: PascalCase
+camelCase: javascript
+spine-case: HTML
+UPPERCASE: Constants (only actually need to have a first capital letter)
+
+Using strings instead of symbols for status
+plane.status = :flying
+
+Dependancy injection - don't allow classes to decide(create) their own dependancies - inject the dependancy at runtime. Where the dependancy is injected in is a design decision, which depends on the implementation. In Airport, we're likely to want to inject it in initialize.
+
+Language of methods not matching the domain - this often means learning and understand how things are expressed in the relevant domains.
+
+Use predicates for boolean attributes, and ensuring the name makes sense depending on the actions.
+
+Always be specific on errors (RunTimeError could easily have a false positive) - although not neccesserily the specific message as this is testing presentation logic.
+
+INDENTATION!!!
+
+Set up text editor to replace tabs with double spaces

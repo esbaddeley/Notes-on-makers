@@ -1,0 +1,7 @@
+Rspec expectations = squiggly brackets are usually part of the Ruby code (not Rspec per se), the only time we actually use it in Rspec is when we're raising errors, because we want Rspec to evaluate the comparison before the block, otherwise the error will occur first, and the program will stop and the test will fail - we're changing the order of execution.
+
+Ruby will process parameters that are passed to a method BEFORE executing the relevant method
+
+Predicate methods and predicate matches - useful but dangerous, as it will evaluate to true anything thats not false - any 'truthy' object. You can just use a strict comparison matcher (.to eq) to check that it is EXACTLY what it should be - i.e true or false.
+
+Factor testing code using SRP to ensure tests are testing for one thing - making sure we're developing isolated tests.
